@@ -15,6 +15,7 @@
 
 ### 기술 설명
 
+```
 //클라이언트 주요 함수
 
 unsigned WINAPI SendMsg(void* arg){//전송용 쓰레드함수
@@ -45,9 +46,9 @@ unsigned WINAPI RecvMsg(void* arg){
 	}
 	return 0;
 }
+```
 
-
-
+```
 //서버 주요 함수
 
 void SendMsg(char* msg, int len){ //메시지를 모든 클라이언트에게 보낸다.
@@ -57,6 +58,7 @@ void SendMsg(char* msg, int len){ //메시지를 모든 클라이언트에게 �
 		send(clientSocks[i], msg, len, 0);//클라이언트들에게 메시지를 전달한다.
 	ReleaseMutex(hMutex);//뮤텍스 중지
 }
+```
 
 ### 사용 방법
 
